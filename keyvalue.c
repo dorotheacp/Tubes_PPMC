@@ -32,8 +32,11 @@ void determine_key(word text[1000], int n, int jml_kata, s_ngram ngram[1000]){
     for (i=0; i<jml_kata; i++){
         strcpy(ngram[i].key, text[i].c);
         for (j=0; j<n-1; j++){
-            strcat(ngram[i].key, " ");
-            strcat(ngram[i].key, text[i+j+1].c);
+            // jika belum sampai kata terakhir
+            if (j+i+1<jml_kata){
+                strcat(ngram[i].key, " ");
+                strcat(ngram[i].key, text[i+j+1].c);
+            }
         }
     }
 
@@ -42,6 +45,7 @@ void determine_key(word text[1000], int n, int jml_kata, s_ngram ngram[1000]){
         for (j=0; j<i-(jml_kata-n+1)+1; j++){
             strcat(ngram[i].key, " ");
             strcat(ngram[i].key, text[j].c);
+            
         }
     }
 
