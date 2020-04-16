@@ -117,10 +117,6 @@ void determine_value(word text[2000000], int n, int jml_kata, s_ngram ngram[2000
     */
 }
 
-
-//Ini kekurangannya masih belom bisa kalo 2 value, trus kalo usernya mau jumlah katanya
-//lebih dripada yang tersedia, kata terakhir bakal ngulang
-
 void PrintnGrams(int n, int in, s_ngram ngram[2000000]){
 
 	int i, j, a, found, arrlength, indeks;
@@ -197,7 +193,7 @@ int main(){
     determine_key(text, n, kk, ngram);
     determine_value(text, n, kk, ngram);
 
-	printf("Mo brp kata? "); //Maks baru bisa 10 karena referensinya pendek
+	printf("Mo brp kata? "); 
 
 	scanf("%d", &in);
 
