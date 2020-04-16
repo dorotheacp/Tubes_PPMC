@@ -7,8 +7,7 @@ typedef struct{
     char value[1000];
 } s_ngram;
 
-//Ini kekurangannya masih belom bisa kalo 2 value, trus kalo usernya mau jumlah katanya
-//lebih dripada yang tersedia, kata terakhir bakal ngulang
+//Ini kekurangannya masih belom bisa kalo 2 value
 
 void PrintnGrams(int n, int in, s_ngram ngram[1000]){
 	
