@@ -29,22 +29,24 @@ void PrintnGrams(int n, int in, s_ngram ngram[1000]){
 	
 	indeks = (rand() % (arrlength - 0 + 1)) + 0;
 	
-	strcpy(cari, ngram[indeks].key);
-	printf("%s ", cari);
+	strcpy(cari, ngram[0].key);
+	printf("...%s ", cari);
 	
 	while ((a <= (in-n)) && (cari != NULL)){	
 		for (i=0;i<=arrlength;i++){
 			if ((strcmp(cari,(ngram[i].key))) == 0){
-				ifound = i;
+				printf("%s ", ngram[i].value);
 			}
 		}
-		printf("%s ", ngram[ifound].value);		
-	
-		strcpy(cari, ngram[ifound+1].key);
-		
+		indeks = indeks+1;
+		if (indeks > arrlength){
+			indeks = 0;
+		}
+		strcpy(cari, ngram[indeks].key);
 		a = a+1;
-	
 	}
+	
+	printf("...");
 	
 }
 
