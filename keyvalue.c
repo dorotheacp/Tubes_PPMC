@@ -1,12 +1,12 @@
 /* EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
 *  MODUL 8 – TUGAS BESAR
 *  Kelompok         : 4
-*  Hari dan Tanggal : Senin, 13 April 2020
+*  Hari dan Tanggal : Rabu, 15 April 2020
 *  Asisten (NIM)    : Devi Tara Avalokita (18316024)
 *  Nama File        : keyvalue.c
 *  Deskripsi        : 
 *  1. Fungsi determine_key digunakan untuk membentuk array of key
-*  2. Fungsi determine_value dugunakan untuk membentuk array og value
+*  2. Fungsi determine_value dugunakan untuk membentuk array of value
 */
 
 #include <stdio.h>
@@ -24,7 +24,7 @@ typedef struct{
 // Fungsi untuk menentukan key
 void determine_key(word text[1000], int n, int jml_kata, s_ngram ngram[1000]){
     // input: array of word berisi text dari file eksternal, n yakni jumlah ngram, jml_kata yakni jumlah kata yang ada pada file eksternal
-    // output: array of s_ngram untuk menyimpan key dan valuer
+    // output: array of s_ngram untuk menyimpan key dan value
 
     int i, j;
 
@@ -59,6 +59,9 @@ void determine_key(word text[1000], int n, int jml_kata, s_ngram ngram[1000]){
 
 // Fungsi untuk menentukan value
 void determine_value(word text[1000], int n, int jml_kata, s_ngram ngram[1000]){
+    // input: array of word berisi text dari file eksternal, n yakni jumlah ngram, jml_kata yakni jumlah kata yang ada pada file eksternal
+    // output: array of s_ngram untuk menyimpan key dan value
+    
     int i, j;
 
     for (i=0; i<jml_kata-n; i++){
