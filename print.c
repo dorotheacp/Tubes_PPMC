@@ -25,8 +25,10 @@ void PrintnGrams(int n, int in, s_ngram ngram[1000]){
 	
 	i = 0; j = 0; a = 1; found = 0;
 	
-	strcpy(cari, ngram[2].key);
-	printf("%s\n", cari);
+	indeks = (rand() % (arrlength - 0 + 1)) + 0;
+	
+	strcpy(cari, ngram[indeks].key);
+	printf("%s ", cari);
 	
 	while ((a <= (in-n)) && (cari != NULL)){	
 		for (i=0;i<=arrlength;i++){
