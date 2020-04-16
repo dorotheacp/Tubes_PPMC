@@ -1,3 +1,12 @@
+/* EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
+* MODUL 8 – TUGAS BESAR
+* Kelompok : 4
+* Hari dan Tanggal : Kamis, 16 Maret 2018
+* Asisten (NIM) : Devi Tara Avalokita (18316024)
+* Nama File : print.c
+* Deskripsi : Fungsi PrintnGrams yang mencetak n-grams dari masukan sebuah tabel berisi key dan value
+*/
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -16,6 +25,8 @@ void PrintnGrams(int n, int in, s_ngram ngram[1000]){
 	char cari[100];
 	int ifound[10];
 	int icont;
+	
+	srand(time(NULL));
 	
 	//Cari panjang array
 	i = 0;
@@ -71,7 +82,7 @@ void PrintnGrams(int n, int in, s_ngram ngram[1000]){
 	printf("...");
 }
 
-
+/*
 int main(){
 	
 	int in;
@@ -118,3 +129,4 @@ int main(){
 	return 0;
 	
 }
+*/
