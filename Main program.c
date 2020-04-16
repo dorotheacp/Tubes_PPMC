@@ -178,8 +178,9 @@ void PrintnGrams(int n, int in, s_ngram ngram[2000000]){
 }
 
 int main(){
-    text[2000000].c[0] = 0;
-
+    //mengosongkan variabel pada array text
+    text[2000000].c[0] = 0
+    //mencetak menu serta penjelasan tentang program ini
     printf("\t Selamat datang di Program N-gram \t\t\n");
     printf("\t    program ini dibuat oleh: \t\t\n");
     printf("\t    Rombongan D Kelompok 4 \t\t\n");
@@ -195,44 +196,48 @@ int main(){
     printf("Bahwa Saat Anda Diperintahkan Memasukan File, Anda Masukan berserta \t\n");
     printf("Dengan  Alamat  Dimana File  Tersebut Diletakan  Di  Komputer  Anda \t\n\n");
     printf("\t Apakah Anda Siap Untuk Melanjutkan?  \t\n");
+    //memastikan bahwa pengguna sudah mengerti dengan deskripsi dan siap menggunakan program
     printf("  Jika Siap Silahkan Tekan Y Jika tidak tekan yang Lain \t\n");
     scanf("%c",&Pilihan);
-
+    // looping sampai pengguna memasukan Y
     while (Pilihan != 'Y'){
         scanf("%c",&Pilihan);
     }
-    while(Pilihan != 'K'){
-    system("cls");
-    kk =0;
+    //Memulai loop program utama
+    while(Pilihan != 'K'){ // program akan berenti jika variabel pilihan bernilai K
+    system("cls");// menghapus pesan pesan sebelumnya pada console
+    kk =0;          //menginisiasi dan mereset nilai kk agar bernilai 0
     printf("Silahkan Memasukan Nama File yang Ingin Anda Baca: \n");
-    scanf("%s", doc);
+    scanf("%s", doc); //membaca file nama file yang akan digunakan
     system("cls");
-    textFile(doc, text);
-    kk = *arrsize;
+    textFile(doc, text); //menggunakan fungsi textfile untuk menghasilkan array kata
+    kk = *arrsize; //mengassign kk dengan jumlah kata pada array
+    //melakukan validasi pada jumlah kk dan memastikan bahwa file ada
     while(kk == 0)
     {
-        if(lol <=3)
+        if(lol <=3) //loop ditetapkan untuk hanya berulang sebanykan 3 kali jika pengguna bercanda
         {
             printf("Silahkan Memasukan Kembali Nama File yang Ingin Anda Baca: \n");
             printf("Anda Memiliki %d Perobaan Tersisa\n",(3-lol));
-            scanf("%s", doc);
+            scanf("%s", doc); //membaca kembali nama file yang dimasukan oleh pengguna
             system("cls");
-            textFile(doc, text);
+            textFile(doc, text); //menggunakan fungsi textFIle kembali untuk membuat array of kata kembali
             kk = *arrsize;
-            lol = lol+1;
+            lol = lol+1; //mengurangi jumlah kesempatan mencoba pengguna
         }
-        else if(lol == 3)
+        else if(lol == 3)//peringatan kembali kepada pengguna untuk memasukan nama file dengan benar
         {
-            printf("Serius lah!Masukkan Nama File dan  \n");
+            printf("Serius lah!Masukkan Nama File dengan benar  \n");
             printf("Anda Memiliki %d Perobaan Tersisa\n",(3-lol));
-            scanf("%s", doc);
+            scanf("%s", doc);//membaca kembali nama file yang dimasukan oleh pengguna
             system("cls");
-            textFile(doc, text);
+            textFile(doc, text);//menggunakan fungsi textFIle kembali untuk membuat array of kata kembali
             kk = *arrsize;
-            lol = lol+1;
+            lol = lol+1; //mengurangi jumlah kesempatan mencoba pengguna
         }
-        else if (lol >3)
+        else if (lol >3) // jika pengguna sudah melebihi kesempatan yang diberikan
         {
+            //pengguna terpaksa harus keluar dari program
             system("cls");
             printf("Udahlah Filenya Gaada\n");
             printf("Silahkan Tekan Apa Aja Untuk Keluar\n");
@@ -242,32 +247,40 @@ int main(){
         }
 
     }
+    //menetapkan pilihan kembali ke Y
     Pilihan = 'Y';
+    //mencetak penjelasan tentang batasan dan anjuran penggunaan program
     printf("Sangat Disanrankan Untuk Menggunakan Nilai N Diantara 1 - 10 \n");
     printf("Untuk Mendapatkan Hasil yang Maksimum.\n");
     printf("Program Ini Hanya akan Menerima Masukan N Dibawah Nilai 10. Demi Keberjalanan Program. \n");
     printf("Silahkan Masukkan Jumlah N pada N-gram yang ingin anda gunakan:\n");
+    //memasukan jumlah n yang akan digunakan pada n-gram
     scanf("%d", &n);
+    //melakukan validasi pada masukan dan memastikan bahwa n bernilai dibawah 10
     while(n >=10)
     {
         printf("Program Ini Hanya akan Menerima Masukan N Dibawah Nilai 10. Demi Keberjalanan Program. \n");
         printf("Silahkan Masukkan Jumlah N pada N-gram yang ingin anda gunakan:\n");
-        scanf("%d", &n);
+        scanf("%d", &n); //memasukan kembali nilai n yang baru
     }
+    //menjalankan fungsi determine_key untuk memasukan key ke array dan fungsi determine_value untuk memasukan value ke key yang cocok
     determine_key(text, n, kk, ngram);
     determine_value(text, n, kk, ngram);
     system("cls");
+    //melalukan loop untuk mencetak hasil n-grram
      while(Pilihan == 'Y' || Pilihan == 'y')
     {
        	printf("Silahkan Memasukan Jumlah Kata yang Ingin Anda Tampilkan: ");
-        scanf("%d", &in);
-        PrintnGrams(n, in, ngram);
+        scanf("%d", &in);//membaca jumlah kata yang ingin dicetak
+        PrintnGrams(n, in, ngram); //mencetak ngram dengan fungsi printnGrams
         printf("\n\n Apakah Anda Ingin Memasukan Jumlah Kata Kembali ?\n");
         printf("Tekan Y untuk jika ya, Tekan T Jika Tidak\n");
+        //memasukan pilihan pengguna apakah ingin memasukan jumlah kata kembali atau tidak
         scanf("%c",&Pilihan);
         scanf("%c",&Pilihan);
         system("cls");
     }
+        //memasukan pilihan pengguna apakah ingin keluar dari program atau memasukan nama file lain
         printf("Apakah Anda Ingin Memasukan File Baru ?\n");
         printf("Tekan Y untuk jika ya, Tekan K Jika Anda Ingin Keluar\n");
         scanf("%c",&Pilihan);
