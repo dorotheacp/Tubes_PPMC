@@ -202,11 +202,13 @@ int main(){
 	scanf("%d", &in);
 
 	PrintnGrams(n, in, ngram);
-    printf("Masukkan K jika ingin keluar:");
+    printf("Masukkan K jika ingin keluar:\n");
     scanf("%c",&keluar);
-    while(keluar != 'k')
+    scanf("%c",&keluar);
+    while(keluar != 'K')
     {
-        printf("masukkan salah tekan K wey!");
+        printf("masukkan salah tekan K wey!\n");
+        scanf("%c",&keluar);
         scanf("%c",&keluar);
     }
 	return 0;
