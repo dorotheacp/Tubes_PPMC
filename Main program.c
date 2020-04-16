@@ -2,18 +2,65 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <time.h>
 
 typedef struct{
-    char key[1000];
-    char value[1000];
+    char key[100];
+    char value[20];
 } s_ngram;
 
 typedef struct{
     char c[100];
 } word;
 
+int *arrsize;
+int in;
+int n;
+char keluar;
+int kk;
+word text[20000];
+s_ngram ngram[20000];
+char doc[100];
+
+
+//Prosedur untuk mengubah file eksternal yang berisi teks menjadi array of string
+void textFile (char new[100], word text[20000])
+{
+	FILE * document;
+//	word text[3000];
+	int kata = 0;
+	int i,faiq=0;
+
+	i=0; faiq = 0;
+
+	document = fopen(new, "r");
+
+	if (document != NULL)
+	{
+		while (!feof(document))
+		{
+			fscanf(document, "%s\n", text[kata].c);
+//			printf("%s ", text[kata].c); //(untuk testing)
+//			printf("%d\n", kata);
+			kata++;
+		}
+
+		fprintf(document, '\0');
+	}
+
+	while (text[i].c[0] != 0){
+		faiq = faiq+1;;
+		i++;
+	}
+	arrsize = &faiq;
+
+//	printf("%d", arrsize); //ini buat ngecek , hasilnya bener
+
+	fclose(document);
+}
+
 // Fungsi untuk menentukan key
-void determine_key(word text[1000], int n, int jml_kata, s_ngram ngram[1000]){
+void determine_key(word text[20000], int n, int jml_kata, s_ngram ngram[20000]){
     // input: array of word berisi text dari file eksternal, n yakni jumlah ngram, jml_kata yakni jumlah kata yang ada pada file eksternal
     // output: array of s_ngram untuk menyimpan key dan value
 
@@ -49,7 +96,7 @@ void determine_key(word text[1000], int n, int jml_kata, s_ngram ngram[1000]){
 }
 
 // Fungsi untuk menentukan value
-void determine_value(word text[1000], int n, int jml_kata, s_ngram ngram[1000]){
+void determine_value(word text[20000], int n, int jml_kata, s_ngram ngram[20000]){
     // input: array of word berisi text dari file eksternal, n yakni jumlah ngram, jml_kata yakni jumlah kata yang ada pada file eksternal
     // output: array of s_ngram untuk menyimpan key dan value
 
@@ -81,6 +128,8 @@ void PrintnGrams(int n, int in, s_ngram ngram[1000]){
 	int ifound[10];
 	int icont;
 
+	srand(time(NULL));
+
 	//Cari panjang array
 	i = 0;
 	while(ngram[i].key[0] != 0){
@@ -97,7 +146,7 @@ void PrintnGrams(int n, int in, s_ngram ngram[1000]){
 	strcpy(cari, ngram[indeks].key);
 
 	if (indeks != 0){
-		printf("...");
+		printf("\n...");
 	}
 
 	printf("%s ", cari);
@@ -132,33 +181,34 @@ void PrintnGrams(int n, int in, s_ngram ngram[1000]){
 		a = a+1;
 	}
 
-	printf("...");
+	printf("...\n");
 }
 
 int main(){
+    text[20000].c[0] = 0;
 
-	int in;
-	int n;
-
-	s_ngram ngram[1000];
-	word text[100] = {"nol", "satu", "dua", "tiga", "empat", "lima,",
-                    "nol", "satu", "lagi","Faiq","Thea","Amel","Tasmon","Thea","Amel","jatuh","bangun","suatu","hari","aku","bangun","lalu","tidur",
-                    "lalu","bangun","lagi","abistu","makan","nasi","abistu","makan","telor","ketika","makan","saya","dipanggil","oleh","ibu.","ibu","berkata:",
-                    "nak","tolong","ambilkan","lontong","di","rumah","ibu","karena","hari","ini","bapak","ulang","tahun"};
-
-
+    scanf("%s", doc);
     printf("Input ngram yang dimau:");
     scanf("%d", &n);
 
-    determine_key(text, n, 53, ngram);
-    determine_value(text, n, 53, ngram);
+    textFile(doc, text);
+    kk = *arrsize;
+
+    determine_key(text, n, kk, ngram);
+    determine_value(text, n, kk, ngram);
 
 	printf("Mo brp kata? "); //Maks baru bisa 10 karena referensinya pendek
 
 	scanf("%d", &in);
 
 	PrintnGrams(n, in, ngram);
-
+    printf("Masukkan K jika ingin keluar:");
+    scanf("%c",&keluar);
+    while(keluar != 'k')
+    {
+        printf("masukkan salah tekan K wey!");
+        scanf("%c",&keluar);
+    }
 	return 0;
 
 }
