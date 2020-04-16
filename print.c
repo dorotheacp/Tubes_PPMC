@@ -7,6 +7,8 @@ typedef struct{
     char value[1000];
 } s_ngram;
 
+//Ini kekurangannya masih belom bisa kalo 2 value, trus kalo usernya mau jumlah katanya
+//lebih dripada yang tersedia, kata terakhir bakal ngulang
 
 void PrintnGrams(int n, int in, s_ngram ngram[1000]){
 	
@@ -49,6 +51,7 @@ void PrintnGrams(int n, int in, s_ngram ngram[1000]){
 int main(){
 	
 	int in;
+	int n = 3;
 	
 	s_ngram ngram[1000];
 	
@@ -70,11 +73,11 @@ int main(){
 	strcpy(ngram[7].key, "hiya haha tawa");
 	strcpy(ngram[7].value, "lu");
 	
-	printf("Mo brp kata? "); //Maks baru bisa 9 karena panjang arraynya terbatas
+	printf("Mo brp kata? "); //Maks baru bisa 10 karena referensinya pendek
 
 	scanf("%d", &in);
-	
-	PrintnGrams(3, in, ngram);
+
+	PrintnGrams(n, in, ngram);
 	
 	return 0;
 	
