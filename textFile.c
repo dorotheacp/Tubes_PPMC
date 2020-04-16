@@ -20,12 +20,12 @@ typedef struct {
 	char c[100];
 } word;
 
-//Prosedur untuk mengubah file eksternal yang berisi teks menjadi array of string
-void textFile (char new[100])
+//Prosedur untuk mengubah file eksternal yang berisi teks menjadi array of words
+//dan menghitung jumlah kata
+void textFile (char new[100], word text[5000])
 {
 	FILE * document;
-	word text[3000];
-	int kata = 0;
+	int kata, i, faiq = 0;
 	
 	document = fopen(new, "r");
 	
@@ -34,19 +34,35 @@ void textFile (char new[100])
 		while (!feof(document))
 		{
 			fscanf(document, "%s\n", text[kata].c);
-			//printf("%s\n", text[kata].c); (untuk testing)
 			kata++;
 		}
+		fprintf(document, '\0');
 	}
-	//printf("%d",kata); (untuk testing)
+	
+	while (text[i].c[0] != 0){
+		faiq = faiq+1;
+		i++;
+	}
+	arrsize = &faiq;
+
+//	printf("%d", arrsize); //ini buat ngecek , hasilnya bener
 	fclose(document);
 }
 
 /* Tes fungsi
 int main()
 {
+	int jml_kata;
+	word text[5000];
+
+	text[5000].c[0] = 0;
+
 	char doc[100];
 	scanf("%s", doc);
-	textFile(doc);
+
+	textFile(doc, text);
+	jml_kata = *arrsize;
+
+	printf("%d",jml_kata);
 }
 */
