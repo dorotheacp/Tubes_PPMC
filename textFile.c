@@ -13,6 +13,21 @@ typedef struct {
 //Prosedur untuk mengubah file eksternal yang berisi teks menjadi array of string
 void textFile (char new[100])
 {
+	FILE * document;
+	int i;
+	word kata[3000];
+	
+	document = fopen(new, "r");
+	if (document != NULL){
+		i = 0;
+		while (fgets(kata[i].c, sizeof kata[i].c, document) != NULL){
+			//Masih salah, ini ngambilnya per baris, nanti dulu
+			//printf("%s", kata[i].c);
+			//kata[i].c = kata;
+			i++;
+		}
+	}
+	fclose(document);
 }
 
 //Prosedur untuk menghitung jumlah kata pada file
