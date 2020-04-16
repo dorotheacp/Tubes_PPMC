@@ -7,13 +7,14 @@ typedef struct{
     char value[1000];
 } s_ngram;
 
-//Ini kekurangannya masih belom bisa kalo 2 value
+//udah bener amin
 
 void PrintnGrams(int n, int in, s_ngram ngram[1000]){
 	
 	int i, j, a, found, arrlength, indeks;
 	char cari[100];
-	int ifound;
+	int ifound[10];
+	int icont;
 	
 	//Cari panjang array
 	i = 0;
@@ -22,37 +23,57 @@ void PrintnGrams(int n, int in, s_ngram ngram[1000]){
 		i = i+1;
 	}
 	
-	printf("%d\n", arrlength);
+//	printf("%d\n", arrlength); //ini ngecek aja
 	
-	i = 0; j = 0; a = 1; found = 0;
+	i = 0; j = 0; a = 1;
 	
 	indeks = (rand() % (arrlength - 0 + 1)) + 0;
 	
-	strcpy(cari, ngram[0].key);
-	printf("...%s ", cari);
+	strcpy(cari, ngram[indeks].key);
 	
-	while ((a <= (in-n)) && (cari != NULL)){	
+	if (indeks != 0){
+		printf("...");
+	}
+	
+	printf("%s ", cari);
+	
+	while ((a <= (in-n)) && (cari != NULL)){
+		found = 0;
+		j = 0;
 		for (i=0;i<=arrlength;i++){
 			if ((strcmp(cari,(ngram[i].key))) == 0){
-				printf("%s ", ngram[i].value);
+				
+				found = found+1;
+				ifound[j] = i;
+				j = j+1;
 			}
 		}
-		indeks = indeks+1;
+		
+		if (found > 1){
+			icont = (rand() % (found-1 - 0 + 1)) + 0;
+			printf("%s ", ngram[(ifound[icont])].value);
+		}
+		else {//found == 1
+			icont = 0;
+			printf("%s ", ngram[(ifound[icont])].value);
+		}
+		
+		indeks = ((ifound[icont])+1);
 		if (indeks > arrlength){
 			indeks = 0;
+			icont = 0;
 		}
 		strcpy(cari, ngram[indeks].key);
 		a = a+1;
 	}
 	
 	printf("...");
-	
 }
+
 
 int main(){
 	
 	int in;
-	int n = 3;
 	
 	s_ngram ngram[1000];
 	
@@ -72,13 +93,25 @@ int main(){
 	strcpy(ngram[6].key, "mon hiya haha");
 	strcpy(ngram[6].value, "tawa");
 	strcpy(ngram[7].key, "hiya haha tawa");
-	strcpy(ngram[7].value, "lu");
+	strcpy(ngram[7].value, "sih");
+	strcpy(ngram[8].key, "haha tawa sih");
+	strcpy(ngram[8].value, "lu");
+	strcpy(ngram[9].key, "tawa sih lu");
+	strcpy(ngram[9].value, "mon");
+	strcpy(ngram[10].key, "sih lu mon");
+	strcpy(ngram[10].value, "wkwk");
+	strcpy(ngram[11].key, "lu mon wkwk");
+	strcpy(ngram[11].value, "hmm");
+	strcpy(ngram[12].key, "mon wkwk hmm");
+	strcpy(ngram[12].value, "bon");
+	strcpy(ngram[13].key, "wkwk hmm bon");
+	strcpy(ngram[13].value, "cos");	
 	
-	printf("Mo brp kata? "); //Maks baru bisa 10 karena referensinya pendek
+	printf("Mo brp kata? ");
 
 	scanf("%d", &in);
-
-	PrintnGrams(n, in, ngram);
+	
+	PrintnGrams(3, in, ngram);
 	
 	return 0;
 	
