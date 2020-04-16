@@ -18,13 +18,13 @@ int in;
 int n;
 char keluar;
 int kk;
-word text[20000];
-s_ngram ngram[20000];
+word text[2000000];
+s_ngram ngram[2000000];
 char doc[100];
 
 
 //Prosedur untuk mengubah file eksternal yang berisi teks menjadi array of string
-void textFile (char new[100], word text[20000])
+void textFile (char new[100], word text[2000000])
 {
 	FILE * document;
 //	word text[3000];
@@ -60,7 +60,7 @@ void textFile (char new[100], word text[20000])
 }
 
 // Fungsi untuk menentukan key
-void determine_key(word text[20000], int n, int jml_kata, s_ngram ngram[20000]){
+void determine_key(word text[2000000], int n, int jml_kata, s_ngram ngram[2000000]){
     // input: array of word berisi text dari file eksternal, n yakni jumlah ngram, jml_kata yakni jumlah kata yang ada pada file eksternal
     // output: array of s_ngram untuk menyimpan key dan value
 
@@ -96,7 +96,7 @@ void determine_key(word text[20000], int n, int jml_kata, s_ngram ngram[20000]){
 }
 
 // Fungsi untuk menentukan value
-void determine_value(word text[20000], int n, int jml_kata, s_ngram ngram[20000]){
+void determine_value(word text[2000000], int n, int jml_kata, s_ngram ngram[2000000]){
     // input: array of word berisi text dari file eksternal, n yakni jumlah ngram, jml_kata yakni jumlah kata yang ada pada file eksternal
     // output: array of s_ngram untuk menyimpan key dan value
 
@@ -121,7 +121,7 @@ void determine_value(word text[20000], int n, int jml_kata, s_ngram ngram[20000]
 //Ini kekurangannya masih belom bisa kalo 2 value, trus kalo usernya mau jumlah katanya
 //lebih dripada yang tersedia, kata terakhir bakal ngulang
 
-void PrintnGrams(int n, int in, s_ngram ngram[1000]){
+void PrintnGrams(int n, int in, s_ngram ngram[2000000]){
 
 	int i, j, a, found, arrlength, indeks;
 	char cari[100];
@@ -185,7 +185,7 @@ void PrintnGrams(int n, int in, s_ngram ngram[1000]){
 }
 
 int main(){
-    text[20000].c[0] = 0;
+    text[2000000].c[0] = 0;
 
     scanf("%s", doc);
     printf("Input ngram yang dimau:");
