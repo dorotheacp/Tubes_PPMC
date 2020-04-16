@@ -1,7 +1,7 @@
 /* EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
 *  MODUL 8 – TUGAS BESAR
 *  Kelompok         : 4
-*  Hari dan Tanggal : Rabu, 15 April 2020
+*  Hari dan Tanggal : Kamis, 16 April 2020
 *  Asisten (NIM)    : Devi Tara Avalokita (18316024)
 *  Nama File        : keyvalue.c
 *  Deskripsi        : 
@@ -63,11 +63,13 @@ void determine_value(word text[1000], int n, int jml_kata, s_ngram ngram[1000]){
     // output: array of s_ngram untuk menyimpan key dan value
     
     int i, j;
-
+    
+    // iterasi sampai kata terakhir pada file
     for (i=0; i<jml_kata-n; i++){
         strcpy(ngram[i].value, text[i+n].c);
     }
-
+    
+    // iterasi untuk menentukan value dari kata pertama pada file
     for (i=jml_kata-n; i<jml_kata; i++){
         strcpy(ngram[i].value, text[i-(jml_kata-n)].c);
     }
@@ -83,15 +85,18 @@ void determine_value(word text[1000], int n, int jml_kata, s_ngram ngram[1000]){
 /*int main(){
     int n, i;
     s_ngram ngram[1000];
+    
+    // Misalnya sebagai teks referensi
     word text[13] = {"nol", "satu", "dua", "tiga", "empat", "lima,",
                     "nol", "satu", "lagi."};
 
-    printf("Input ngram yang dimau:");
+    printf("Input ngram:");
     scanf("%d", &n);
 
     determine_key(text, n, 9, ngram);
     determine_value(text, n, 9, ngram);
-
+    
+    // print seluruh key dan value
     printf("\n");
     for (i=0; i<9; i++){
         printf("%d \t %s \t %s\n", i, ngram[i].key, ngram[i].value);
