@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <time.h>
 
 typedef struct{
     char key[1000];
@@ -111,6 +112,7 @@ int main(){
 
 	scanf("%d", &in);
 	
+	srand(time(NULL));
 	PrintnGrams(3, in, ngram);
 	
 	return 0;
