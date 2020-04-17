@@ -27,10 +27,10 @@ Atran penulisan satuan :
 	Singkatan satuan hanya terdiri dari dua huruf,
 	Satuan yang bukan berasal dari nama orang, singkatan satuan nya tidak ditulis kapital.
 III.Angka Penting
-Setelah menentukan variabel dan satuan, kita dapat menghitung nilai mereka. Jika menghitung beberapa operasi melalui kalkulator kita akan mendapatkan hasil dengan digit yang banyak. Namun semua angka itu benar-benar harus diperhatikan? Tentu tidak sehingga kita akan menemukan konsep “angka penting”. Konsep angka penting muncul karena aritmetika sendiri tidak menambah keakuratan dari suatu perhitungan. Walaupun desimal dari hasil perhitungan sudah kita cantumkan semua, hal tersebut tidak menjamin keakuratan dari perhitungan.
+Setelah menentukan variabel dan satuan, kita dapat menghitung nilai mereka. Jika menghitung beberapa operasi melalui kalkulator kita akan mendapatkan hasil dengan digit yang banyak. Namun semua angka itu benar-benar harus diperhatikan? Tentu tidak sehingga kita akan menemukan konsep â€œangka pentingâ€. Konsep angka penting muncul karena aritmetika sendiri tidak menambah keakuratan dari suatu perhitungan. Walaupun desimal dari hasil perhitungan sudah kita cantumkan semua, hal tersebut tidak menjamin keakuratan dari perhitungan.
 Jumlah angka penting dalam bilangan
-Untuk memudahkan penentuan jumlah angka penting, maka suatu bilangan dapat dinyatakan dalam angka saintifik (A×10n) dengan jumlah angka penting sesuai jumlah angka pada “A”. 
-Contoh: 0,003322 = 3,322×10-3 memiliki 4 angka penting.
+Untuk memudahkan penentuan jumlah angka penting, maka suatu bilangan dapat dinyatakan dalam angka saintifik (AÃ—10n) dengan jumlah angka penting sesuai jumlah angka pada â€œAâ€. 
+Contoh: 0,003322 = 3,322Ã—10-3 memiliki 4 angka penting.
 
 
 Operasi matematika angka penting
@@ -41,13 +41,13 @@ hasil operasi mengikuti jumlah angka penting terkecil dari operasi.
 jika angka desimal yang dibulatkan <5 : pembulatan ke bawah,
 jika angka desimal yang dibulatkan =5 : pembulatan ke atas.
 
-IV.Metode “Need-Know-How-Solve”
-Dalam rekayasa akan ditemukan banyak persoalan atau masalah. Langkah paling efektif untuk membantu penyelesaian masalah tersebut adalah melalui metode “Need-Know-How-Solve”. Langkah-langkahnya ialah mengidentifikasikan masalah sesuai:
+IV.Metode â€œNeed-Know-How-Solveâ€
+Dalam rekayasa akan ditemukan banyak persoalan atau masalah. Langkah paling efektif untuk membantu penyelesaian masalah tersebut adalah melalui metode â€œNeed-Know-How-Solveâ€. Langkah-langkahnya ialah mengidentifikasikan masalah sesuai:
 Need	: apa yang harus dijawab dari persoalan,
 Know	: apa yang diketahui dari persoalan,
 How	: memodelkan dan menjelaskan proses penyelesaian, dan
 Solve	: melakukan perhitungan untuk mencari penyelesaian.
-Langkah “Need-Know-How-Solve” ini dapat membantu kita dalam merumuskan proses penyelesaian masalah serta menghindari penyelesaian masalah yang salah. Bahkan meski jawaban akhir nanti tidak tepat, langkah ini tetap membuat nilai yang lebih baik.
+Langkah â€œNeed-Know-How-Solveâ€ ini dapat membantu kita dalam merumuskan proses penyelesaian masalah serta menghindari penyelesaian masalah yang salah. Bahkan meski jawaban akhir nanti tidak tepat, langkah ini tetap membuat nilai yang lebih baik.
 Analisis Spreadsheet
 Spreadsheet dapat membantu kita untuk menjelaskan dan menyelesaikan masalah yang terlalu susah jika kita kerjakan langsung. Spreadsheet dapan menampilkan data dengan baik dan memungkin kan anda untuk memisahkan antara data, informasi, dan pengetahuan.
 
