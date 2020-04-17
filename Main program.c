@@ -1,7 +1,7 @@
 /* EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
 *  MODUL 8 – TUGAS BESAR
 *  Kelompok         : 4
-*  Hari/Tanggal     : Kamis, 16 April 2020
+*  Hari/Tanggal     : jumat, 17 April 2020
 *  Asisten	        : Devi Tara Avalokita (18316024)
 *  Nama File        : Main program.c
 *  Deskripsi        : Berisikan main program dari program n-gram
