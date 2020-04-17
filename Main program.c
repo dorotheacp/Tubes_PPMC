@@ -1,4 +1,16 @@
-
+/* EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
+*  MODUL 8 – TUGAS BESAR
+*  Kelompok         : 4
+*  Hari/Tanggal     : Kamis, 16 April 2020
+*  Asisten	        : Devi Tara Avalokita (18316024)
+*  Nama File        : Main program.c
+*  Deskripsi        : Berisikan main program dari program n-gram
+*  1. textFile untuk menginput kata dari file eksternal ke dalam array of words dan
+*     menghitung jumlah kata yang ada di dalam file eksternal
+*  2. Fungsi determine_key digunakan untuk membentuk array of key
+*  3. Fungsi determine_value dugunakan untuk membentuk array of value
+*  4. Fungsi PrintnGrams yang mencetak n-grams dari masukan sebuah tabel berisi key dan value
+*/
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -200,11 +212,11 @@ int main(){
     printf("  Jika Siap Silahkan Tekan Y Jika tidak tekan yang Lain \t\n");
     scanf("%c",&Pilihan);
     // looping sampai pengguna memasukan Y
-    while (Pilihan != 'Y'){
+    while (Pilihan != 'Y' && Pilihan != 'y'){
         scanf("%c",&Pilihan);
     }
     //Memulai loop program utama
-    while(Pilihan != 'K'){ // program akan berenti jika variabel pilihan bernilai K
+    while(Pilihan != 'K' && Pilihan != 'k' ){ // program akan berenti jika variabel pilihan bernilai K
     memset(text,0,sizeof(text));
     memset(ngram,0,sizeof(ngram));
     system("cls");//menghapus pesan pesan sebelumnya pada console
@@ -213,8 +225,7 @@ int main(){
     scanf("%s", doc); //membaca file nama file yang akan digunakan
     system("cls");
     textFile(doc, text); //menggunakan fungsi textfile untuk menghasilkan array kata
-    kk = *arrsize; //mengassign kk dengan jumlah kata pada array
-    printf("%d\n",kk);
+    kk = *arrsize; //mengassign kk dengan jumlah kata pada array;
     //melakukan validasi pada jumlah kk dan memastikan bahwa file ada
     while(kk == 0)
     {
@@ -253,14 +264,14 @@ int main(){
     //menetapkan pilihan kembali ke Y
     Pilihan = 'Y';
     //mencetak penjelasan tentang batasan dan anjuran penggunaan program
-    printf("Sangat Disarankan Untuk Menggunakan Nilai N Diantara 1 - 9 \n");
+    printf("Sangat Disarankan Untuk Menggunakan Nilai N Diantara 1 - 10 \n");
     printf("Untuk Mendapatkan Hasil yang Maksimum.\n");
     printf("Program Ini Hanya akan Menerima Masukan N Dibawah Nilai 9 dan Diatas 1. Demi Keberjalanan Program. \n");
     printf("Silahkan Masukkan Jumlah N pada N-gram yang ingin anda gunakan:\n");
     //memasukan jumlah n yang akan digunakan pada n-gram
     scanf("%d", &n);
     //melakukan validasi pada masukan dan memastikan bahwa n bernilai dibawah 10
-    while(n >=10 || n < 1)
+    while(n >=10 || n <= 1)
     {
         printf("Program Ini Hanya akan Menerima Masukan N Dibawah Nilai 9 dan Diatas 1. Demi Keberjalanan Program. \n");
         printf("Silahkan Masukkan Jumlah N pada N-gram yang ingin anda gunakan:\n");
