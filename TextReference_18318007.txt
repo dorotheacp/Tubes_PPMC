@@ -1,0 +1,109 @@
+1. LATAR BELAKANG DAN TUJUAN PRODUK
+Kebutuhan rumah tangga setiap orang pasti sangat beragam. Setiap orang pasti menyimpan 
+berbagai stok barang-barang kebutuhan rumah tangga mulai dari bahan makanan seperti 
+beras, sereal, oatmeal, dan minyak serta alat-alat kebersihan seperti peralatan mandi 
+yakni sabun dan sampo atau peralatan kebersihan lainnya seperti sabun cuci piring, sabun 
+pel, dan sebagainya. Oleh karena banyaknya kebutuhan rumah tangga ini, orang-orang seringkali 
+lupa atau tidak sadar bahwa stok kebutuhan rumah tangga mereka sudah mulai menipis. Apalagi 
+di tengah-tengah kesibukan orang-orang jalani, mereka seringkali tidak sadar bahwa stok 
+kebutuhan rumah tangga mereka telah habis sehingga ketika hendak digunakan atau dikonsumsi, 
+tidak ada lagi stok barang yang dapat digunakan. Sebagai contoh, suatu hari ketika seorang 
+mahasiswa yang setiap paginya memakan oatmeal atau sereal sebagai sarapannya, menyadari 
+bahwa stok oatmeal atau sereal di kosnya sudah habis. Ia tidak sadar bahwa stok sarapannya 
+ini sudah habis sehingga belum membeli stok oatmeal atau sereal lagi. Alhasil, ia harus 
+berangkat ke kampus dalam keadaan perut kosong sehingga tidak fokus dalam proses perkuliahan.
+Untuk menghindari hal seperti ini, maka praktikan memiliki ide untuk membuat alat yang dapat
+memberi peringatan ketika stok barang sudah hampir habis. Stok barang yang digunakan oleh 
+praktikan yaitu sereal.
+
+Sereal merupakan kebutuhan yang cukup sering ditemui di kalangan mahasiswa, hal ini 
+dikarenakan sereal merupakan makanan yang dapat disantap dengan cepat dan praktis. Biasanya, 
+sereal dikemas dalam plastik yang tidak tembus pandang sehingga kita tidak tahu jumlah pasti 
+sereal tersebut setelah kita konsumsi terus menerus. Dengan menggunakan alat ini, maka apabila 
+berat sereal telah mencapai nilai tertentu maka akan diberi peringatan yang akan memberi tanda 
+pada pengguna bahwa stok sereal sudah hampir habis sehingga pengguna perlu membeli kembali sereal.
+Hayo masih baca ga. Aku udah bosen social distancing kerjaannya cuma rebahan, makan, nonton, nugas.
+Semoga dunia cepat pulih ya amin.
+ 
+Tujuan dari pembuatan alat ini adalah agar pengguna tidak perlu khawatir akan kehabisan stok 
+tertentu tepat saat barang ingin digunakan karena sebelum stok barang habis, pengguna akan 
+diberi peringatan sehingga barang tersebut dapat dibeli kembali oleh pengguna.
+
+2. DESKRIPSI DAN GAMBARAN PRODUK
+Pada alat ini, masukan dari alat adalah berat yang akan dideteksi menggunakan sensor berat. 
+Kemudian "otak" dari alat ini menggunakan board Arduino UNO dan juga software Arduino IDE. 
+Sedangkan keluaran dari alat ini adalah buzzer dan LCD. Sensor berat akan dipasang pada breadboard 
+kemudian akan dihubungkan dengan resistor dan pin pada arduino. Tujuan dari pemasangan resistor yaitu 
+agar arus yang mengalir tidak terlalu besar sehingga tidak merusak komponen. Kemudian untuk keluaran 
+dari alat ini, buzzer dan LCD akan dipasang juga pada breadboard dan akan dihubungkan ke pin output pada 
+arduino. Barang akan diletakkan di atas sensor berat kemudian akan dibuat kode program sehingga apabila 
+berat benda mencapai suatu nilai tertentu, akan muncul pesan peringatan pada LCD dan buzzer akan berbunyi. 
+Dengan pesan peringatan dan bunyi buzzer, maka pengguna akan mengetahui bahwa stok barang sudah hampir 
+habis sehingga pengguna perlu untuk membeli stok barang tersebut.
+
+3. FUNGSI PRODUK
+Produk berfungsi sebagai alarm pengingat bagi pengguna untuk mengingatkan kapan pengguna harus membeli 
+suatu barang tertentu. Alat ini akan memberi peringatan bila berat barang sudah mencapai nilai tertentu. 
+Bila berat barang mencapai nilai yang ditentukan maka buzzer akan berbunyi dan LCD menampilkan teks 
+"Stok Habis" sehingga pengguna diingatkan untuk membeli stok barang tersebut sebelum barang benar-benar 
+habis. Dengan alarm ini maka dapat dicegah kejadian saat pengguna ingin menggunakan suatu barang tertentu 
+tetapi stok barang tersebut habis. Apabila digunakan alarm ini maka penggguna akan ingat untuk membeli stok 
+barang sehingga barang akan terus ada saat ingin digunakan.
+
+4. CARA KERJA DAN FLOWCHART SISTEM
+Saat pertama kali dinyalakan, akan dilakukan kalibrasi terlebih dahulu dengan menggunakan beban terukur 100 
+gram. Kemudian sensor berat akan melakukan pengukuran berat secara terus-menerus. Jika berat terukur bernilai 
+lebih dari 50 gram, LCD akan menampilkan teks "Stok tersedia" dan buzzer akan tetap mati. Sedangkan jika berat 
+terukur kurang dari 50 gram, LCD akan menampilkan pesan "Stok habis" dan buzzer akan menyala. Pengukuran berat 
+akan terus dilakukan sampai sumber listrik diputus dari rangkaian.
+
+5. CARA PENGGUNAAN PRODUK
+Saat pertama kali dinyalakan, perlu dilakukan kalibrasi sensor berat. Alat ini akan meminta pengguna untuk 
+meletakkan beban sebesar 100 gram pada sensor berat sehingga dapat dilakukan kalibrasi. Selama sensor berat 
+mendeteksi beban yang bernilai lebih dari 50 gram, LCD akan menampilkan pesan berisi berat beban tersebut dan 
+pesan "Stok tersedia". Sedangkan jika sensor berat mendeteksi beban yang bernilai kurang dari 50 gram, LCD akan 
+menampilkan berat beban tersebut dan pesan "Stok habis" serta buzzer akan menyala dan mati setiap 1 detik untuk 
+memperingati pengguna bahwa stok mereka telah menipis. LCD yang digunakan juga terhubung dengan potensiometer 
+sehingga kontras tampilan LCD dapat disesuaikan dengan keberadaan cahaya pada ruangan oleh penggunanya. Secara 
+umum, alat ini dapat digunakan sebagai alarm pengingat stok berbagai barang yang memiliki ketelitian berat sekitar 
+1 gram. Pada projek ini, alat ini dipergunakan untuk memantau stok sereal karena cocok dengan keperluan mahasiswa 
+khususnya yang sering memakan sereal sebagai sarapannya. Selain itu, alat ini juga dapat digunakan untuk memantau 
+stok beras, air galon, sampo, atau kebutuhan rumah tangga lainnya.
+
+6. HASIL DAN ANALISIS
+Setelah membuat kode program pada Arduino IDE, program di-compile terlebih dahulu sebelum kemudian di-upload pada 
+board Arduino Uno. Karena seharusnya alat ini digunakan secara 24 jam, maka board Arduino dihubungkan ke stop 
+kontak dengan menggunakan kabel AC to DC adapter. Pada saat Arduino pertama kali dihubungkan ke sumber listrik, 
+tampilan pada layar LCD telah sesuai dengan apa yang diharapkan yakni muncul tulisan "Alarm Stok" pada LCD 
+selama 1 detik. Kemudian muncul tulisan "Kalibrasi... Mohon menunggu..." sesuai dengan program yang telah dibuat. 
+Pada LCD akan muncul pesan "Letakkan 100g" sebagai kalibrator sensor beratnya. Setelah beban 100 gram diletakkan 
+di atas load cell, pada LCD muncul pesan "Mohon menunggu" agar proses kalibrasi dapat dilakukan sesuai dengan 
+program yang telah dibuat. Setelah kalibrasi berhasil dilakukan, barang yang akan diketahui stoknya dapat 
+diletakkan di atas load cell. LCD akan menampilkan nilai berat barang tersebut dan menampilkan apakah stok habis 
+atau stok tersedia. Apabila stok tersedia yaitu nilai berat barang sebesar lebih dari 50 gram, maka buzzer tidak 
+akan berbunyi LCD akan menampilkan pesan "Stok tersedia". Sedangkan bila berat barang bernilai kurang dari 50 gram, 
+maka buzzer akan berbunyi "beep beep" secara konstan dan LCD menampilkan nilai berat dan teks "Stok Habis".
+Secara keseluruhan, alat ini telah bekerja sesuai dengan progam yang dibuat. Kendala yang terjadi ada pada sensor 
+beratnya yakni load cell. Load cell yang digunakan cukup sensitif dan harus diletakkan pada posisi tertentu agar 
+dapat bekerja dengan stabil. Pada pembacaan berat stok barang, LCD tidak menampilkan angka yang konstan. Hal ini 
+terjadi karena beberapa faktor. Pada bagian bawah load cell, terdapat lem untuk menghubungkan kabel-kabel yang 
+diperlukan. Lem tersebut cukup menonjol sehingga bagian bawah load cell tersebut tidak datar sehingga load cell tidak 
+dapat diletakkan secara datar dengan sempurna, bagian kanan dan kiri load cell menjadi tidak seimbang. Oleh karena 
+itu, pembacaan nilai berat yang dilakukan menjadi kurang akurat, bergantung posisi load cell saat kalibrasi maupun 
+saat pengukuran. Hal ini seharusnya dapat diatasi dengan menghubungkan load cell dengan penumpu yang pasti (konstan) 
+dengan cara menyekrup bagian bawah load cell pada kayu atau permukaan datar lainnya dan melakukan pengukuran pada 
+tempat yang sama. Misalnya, load cell dapat disekrup ke kayu pada bagian kiri bawah dan pengukuran beratnya dilakukan 
+pada bagian kanan atas load cell. Dengan cara ini, pembacaa nilai beratnya akan menjadi lebih akurat dan konstan.
+
+7. IDE PENGEMBANGAN
+Alarm pengingat stok habis dengan sensor berat (APSOB) ini diprogram khusus untuk mengetahui stok sereal yang tersedia. 
+Output yang digunakan juga hanya dapat dilihat atau didengar ketika pengguna berada di dekat alat ini. Oleh karena itu, 
+APSOB dapat dikembangkan lebih lanjut dengan menambahkan keypad sebagai masukan khususnya untuk masukan nilai ambang stok 
+dinyatakan sudah menipis atau sudah habis. Sebagai contoh, dalam pemanfaatan APSOB untuk mengetahui ketersediaan stok 
+beras, alat ini tidak perlu diprogram ulang untuk mengganti nilai ambang stok habis, tetapi hanya perlu memasukkan nilai 
+ambang stok habis tersebut melalui keypad. Misalnya stok beras dinyatakan habis ketika telah mencapai berat kurang dari 
+100 gram. Dengan keypad, nilai 100 gram ini dapat diketikkan langsung melalui keypad tanpa harus memprogram ulang 
+Arduinonya. Selain itu, APSOB dapat dikembangkan dengan menambahkan fitur bluetooth atau koneksi internet agar dapat 
+terhubung dengan ponsel pengguna. Dengan penambahan fitur ini, stok barang dapat langsung diketahui pengguna walaupun 
+pengguna sedang tidak ada di rumah. Oleh karena itu, pengguna dapat langsung mengetahui bahwa stok barang mereka telah 
+habis sehingga dapat langsung berbelanja barang yang telah habis tersebut.
