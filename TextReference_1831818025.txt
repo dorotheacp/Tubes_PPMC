@@ -1,0 +1,61 @@
+ELEMEN DAN ANALISIS REKAYASA
+
+
+I.Pendahuluan
+a.Variabel
+Setiap pertanyaan yang diajukan para insinyur melibatkan variabel. Variabel adalah sebuah kuantitas yang ditentukan secara tepat menggambarkan aspek-aspek alam. Apa yang insinyur kalkulasi berbeda dengan metematika murni. Pada bagian akhir biasanya fokus pada jawaban numerik akhir sebagai hasil dari analisis. 
+Intinya, variabel hampir selalu didefinisikan dalam hal pengukuran yang familiar, seperti termometer, penggaris, dan jam. Contohnya kecepatan, didefinisikan sebagai variabel penggaris dibagi dengan variabel jam.
+Tetapi, mengekspresikan sesuatu dalam variabel hanyalah awal dari pengetahuan teknik. Terdapat elemen kedua yang penting dalam analisis teknik: satuan.
+b.	Satuan
+Hukum alam tergantung pada sistem satuan yang kita gunakan. Dalam perhitungan teknik dan sains terdapat dua bagian: nilai numerik dan satuan yang berasosiasi dengannya, jika ada. Oleh karena itu, hasil kalkulasi teknik harus benar di dua kategori : nilai numerik yang benar dan satuan yang benar.
+Satuan adalah jalan dari pengukuran yang mendasari konsep dimensi. Dimensi adalah dasar kuantitas yang kita tahu, seperti massa, panjang, dan waktu. Satuan memberi kita skala numerik dimana kita menggunakan beberapa dimensi. Apakah kita menggunakan satuan kaki atau meter tidak akan memberi pengaruh pada hukum alam. Oleh karena itu, sistem satuan seringkali berbeda-beda berdasarkan budaya.
+
+
+
+
+Sistem Satuan SI
+Standar internasional dalam satuan disebut sistem SI yang digunakan dalam sains dan teknologi modern. Satuan dalam sistem SI terdiri dari :
+	meter (m), satuan dasar panjang,
+	detik (s), satuan dasar waktu,
+	kilogram (kg), satuan dasar massa,
+	kelvin (K), satuan dasar suhu,
+	mol (mol), satuan dasar jumlah partikel, dan
+	ampere (A), satuan dasar arus listrik.
+Atran penulisan satuan :
+	Satuan tidak ditulis dengan huruf kapital (kecuali ada pada awal kalimat),
+	Singkatan satuan harus kapital,
+	Singkatan satuan hanya terdiri dari dua huruf,
+	Satuan yang bukan berasal dari nama orang, singkatan satuan nya tidak ditulis kapital.
+III.Angka Penting
+Setelah menentukan variabel dan satuan, kita dapat menghitung nilai mereka. Jika menghitung beberapa operasi melalui kalkulator kita akan mendapatkan hasil dengan digit yang banyak. Namun semua angka itu benar-benar harus diperhatikan? Tentu tidak sehingga kita akan menemukan konsep “angka penting”. Konsep angka penting muncul karena aritmetika sendiri tidak menambah keakuratan dari suatu perhitungan. Walaupun desimal dari hasil perhitungan sudah kita cantumkan semua, hal tersebut tidak menjamin keakuratan dari perhitungan.
+Jumlah angka penting dalam bilangan
+Untuk memudahkan penentuan jumlah angka penting, maka suatu bilangan dapat dinyatakan dalam angka saintifik (A×10n) dengan jumlah angka penting sesuai jumlah angka pada “A”. 
+Contoh: 0,003322 = 3,322×10-3 memiliki 4 angka penting.
+
+
+Operasi matematika angka penting
+Penjumlahan dan pengurangan 
+hasil operasi mengikuti jumlah angka desimal terkecil dari operasi.	Perkalian dan pembagian
+hasil operasi mengikuti jumlah angka penting terkecil dari operasi.
+	Pembulatan 
+jika angka desimal yang dibulatkan <5 : pembulatan ke bawah,
+jika angka desimal yang dibulatkan =5 : pembulatan ke atas.
+
+IV.Metode “Need-Know-How-Solve”
+Dalam rekayasa akan ditemukan banyak persoalan atau masalah. Langkah paling efektif untuk membantu penyelesaian masalah tersebut adalah melalui metode “Need-Know-How-Solve”. Langkah-langkahnya ialah mengidentifikasikan masalah sesuai:
+Need	: apa yang harus dijawab dari persoalan,
+Know	: apa yang diketahui dari persoalan,
+How	: memodelkan dan menjelaskan proses penyelesaian, dan
+Solve	: melakukan perhitungan untuk mencari penyelesaian.
+Langkah “Need-Know-How-Solve” ini dapat membantu kita dalam merumuskan proses penyelesaian masalah serta menghindari penyelesaian masalah yang salah. Bahkan meski jawaban akhir nanti tidak tepat, langkah ini tetap membuat nilai yang lebih baik.
+Analisis Spreadsheet
+Spreadsheet dapat membantu kita untuk menjelaskan dan menyelesaikan masalah yang terlalu susah jika kita kerjakan langsung. Spreadsheet dapan menampilkan data dengan baik dan memungkin kan anda untuk memisahkan antara data, informasi, dan pengetahuan.
+
+
+
+Data adalah kumpulan fakta atau angka. Mereka dapat menjadi sebuah informasi ketika kita memilah dengan sedemikian rupa. Dengan itu mereka dapat berubah menjadi sebuah pengetahuan ketika urutan angka dan urutan warna berarti sesuatu seperti:
+Data 	: 4,3,1,1,6 atau merah, ungu, merah, hijau, biru, jingga, dan kuning.
+Informasi : 3,1,4,1,6 atau merah, jingga, kuning, hijau, biru, violet.
+Pengetahuan	: phi (3,1416) atau spektrum warna.
+Spreadsheet diciptakan di Harvard Business School im 1979 oleh seorang mahasiswa. VisiCale tercipta untuk memudahkan kerja perhitungan. Spreadsheet modern tidak hanya membantu perhitungan tetapi dapat menampilkan data dengan indah, tertata dan rapi yang dapat membantu dalam memahami data yang ditayangkan.
+Spreadsheet menjadi salah satu program yang sangat penting terutama di PC. Lotus 123 diikuti Visicale lalu Microsoft Excel. Analisis Spreadsheet merupakan hal yang sangat penting dan tidak rugi jika melakukan itu. Bahkan analisis spreadsheet krusial dalam memetakan dana dan menarik kesimpulan.
