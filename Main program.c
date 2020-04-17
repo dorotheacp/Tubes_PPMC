@@ -227,11 +227,12 @@ int main(){
     textFile(doc, text); //menggunakan fungsi textfile untuk menghasilkan array kata
     kk = *arrsize; //mengassign kk dengan jumlah kata pada array;
     //melakukan validasi pada jumlah kk dan memastikan bahwa file ada
-    while(kk == 0)
+    while(kk <=2)
     {
         if(lol <=3) //loop ditetapkan untuk hanya berulang sebanykan 3 kali jika pengguna bercanda
         {
             printf("Silahkan Memasukan Kembali Nama File yang Ingin Anda Baca: \n");
+            printf("Pastikan File Anda Memiliki Lebih Dari 2 Kata Didalamnya.\n");
             printf("Anda Memiliki %d Percobaan Tersisa\n",(3-lol));
             scanf("%s", doc); //membaca kembali nama file yang dimasukan oleh pengguna
             system("cls");
@@ -242,6 +243,7 @@ int main(){
         else if(lol == 3)//peringatan kembali kepada pengguna untuk memasukan nama file dengan benar
         {
             printf("Serius lah!Masukkan Nama File dengan benar  \n");
+            printf("Pastikan File Anda Memiliki Lebih Dari 2 Kata Didalamnya.\n");
             printf("Anda Memiliki %d Percobaan Tersisa\n",(3-lol));
             scanf("%s", doc);//membaca kembali nama file yang dimasukan oleh pengguna
             system("cls");
